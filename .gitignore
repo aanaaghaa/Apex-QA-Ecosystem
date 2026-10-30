@@ -1,0 +1,4 @@
+target-app/node_modules/ 
+apex-qa-engine/venv/ 
+apex-qa-engine/logs/ 
+.env 
