@@ -1,0 +1,193 @@
+<body>
+ <app-root>
+  <div class="text-center p-2 bg-dark" data-test="notification-bar">
+   View the
+   <a class="text-white" href="https://testsmith-io.github.io/practice-software-testing/#/">
+    Documentation
+   </a>
+   for this application.
+  </div>
+  <app-header>
+   <div class="testing-notification-bar">
+    <div class="container">
+     <span>
+      Practice Black Box Testing &amp; Bug Hunting
+     </span>
+     <button class="testing-guide-btn">
+      Testing Guide
+     </button>
+    </div>
+   </div>
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+     <a class="navbar-brand" href="/">
+     </a>
+     <button aria-label="Toggle navigation" class="navbar-toggler" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul aria-label="Main menu" class="navbar-nav ms-auto mb-2" role="menubar">
+       <li class="nav-item" role="menuitem">
+        <a class="nav-link active" data-test="nav-home" href="/">
+         Home
+        </a>
+       </li>
+       <li class="nav-item dropdown" role="menuitem">
+        <button class="nav-link dropdown-toggle btn-link-style" data-test="nav-categories" type="button">
+         Categories
+        </button>
+        <ul aria-label="nav-categories" class="dropdown-menu">
+         <li>
+          <a class="dropdown-item" data-test="nav-hand-tools" href="/category/hand-tools">
+           Hand Tools
+          </a>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-power-tools" href="/category/power-tools">
+           Power Tools
+          </a>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-other" href="/category/other">
+           Other
+          </a>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-special-tools" href="/category/special-tools">
+           Special Tools
+          </a>
+         </li>
+         <li>
+          <hr class="dropdown-divider"/>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-rentals" href="/rentals">
+           Rentals
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="nav-item" role="menuitem">
+        <a class="nav-link" data-test="nav-contact" href="/contact">
+         Contact
+        </a>
+       </li>
+       <li class="nav-item" role="menuitem">
+        <a class="nav-link" data-test="nav-sign-in" href="/auth/login">
+         Sign in
+        </a>
+       </li>
+      </ul>
+      <div class="btn-group dropdown">
+       <button aria-label="Select language" class="btn nav-link dropdown-toggle" data-test="language-select" id="language" type="button">
+        <fa-icon class="ng-fa-icon">
+        </fa-icon>
+        EN
+        <span class="caret">
+        </span>
+       </button>
+       <ul class="dropdown-menu dropdown-menu-right" id="dropdown-animated" role="menu">
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-de">
+          DE
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-el">
+          EL
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-en">
+          EN
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-es">
+          ES
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-fr">
+          FR
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-nl">
+          NL
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-tr">
+          TR
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </app-header>
+  <div class="container">
+   <router-outlet>
+   </router-outlet>
+   <app-detail>
+    <hr/>
+    <div class="row">
+     <h2>
+      Related products
+     </h2>
+     <div class="col">
+      <div class="container">
+      </div>
+     </div>
+    </div>
+   </app-detail>
+  </div>
+  <app-footer>
+   <footer class="container-fluid text-center bg-light">
+    <div>
+     This is a DEMO application (
+     <a href="https://github.com/testsmith-io/practice-software-testing">
+      GitHub repo
+     </a>
+     ), used for software testing training purpose. |
+     <a href="/privacy">
+      Privacy Policy
+     </a>
+     | Banner photo by
+     <a href="https://unsplash.com/@barnimages">
+      Barn Images
+     </a>
+     on
+     <a href="https://unsplash.com/photos/t5YUoHW6zRo">
+      Unsplash
+     </a>
+     .
+    </div>
+    <div class="text-muted">
+     v6.0.0 | Built 2026-07-05 | Angular 20.0.5
+    </div>
+   </footer>
+  </app-footer>
+  <app-chat-widget>
+   <div class="chat-widget">
+    <button aria-label="Open chat" class="chat-toggle-btn" data-test="chat-toggle">
+    </button>
+   </div>
+  </app-chat-widget>
+  <app-live-activity-widget>
+   <div class="live-widget">
+    <button aria-label="Show live shop activity" class="live-toggle-btn" data-test="live-activity-toggle" type="button">
+    </button>
+   </div>
+  </app-live-activity-widget>
+ </app-root>
+ <script type="module">
+ </script>
+ <script>
+ </script>
+ <script type="module">
+ </script>
+</body>

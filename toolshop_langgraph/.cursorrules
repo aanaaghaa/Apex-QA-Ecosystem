@@ -1,0 +1,15 @@
+# Project: Apex QA Ecosystem (Toolshop LangGraph Agent)
+
+## Architecture & Folder Structure
+- Keep manual/graph.py, manual/state.py, manual/prompt.py as single files
+- Keep each node or agent under manual/nodes/agent_name.py
+- Keep different folders for manual and automation
+
+## DOM Compression Rules (No LLM)
+- Do NOT use an LLM for HTML compression; use deterministic Python (`BeautifulSoup`).
+
+
+## LangGraph & Coding Standards
+- Use LangGraph `StateGraph` with explicit `TypedDict` state definitions from `manual/state.py`.
+- Keep all LLM system/user prompt templates strictly inside `manual/prompt.py`.
+- In generated Playwright code (JavaScript), prioritize `[data-test="..."]` locators over CSS classes

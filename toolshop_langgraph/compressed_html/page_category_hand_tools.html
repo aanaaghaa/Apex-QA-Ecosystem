@@ -1,0 +1,709 @@
+<body>
+ <app-root>
+  <div class="text-center p-2 bg-dark" data-test="notification-bar">
+   View the
+   <a class="text-white" href="https://testsmith-io.github.io/practice-software-testing/#/">
+    Documentation
+   </a>
+   for this application.
+  </div>
+  <app-header>
+   <div class="testing-notification-bar">
+    <div class="container">
+     <span>
+      Practice Black Box Testing &amp; Bug Hunting
+     </span>
+     <button class="testing-guide-btn">
+      Testing Guide
+     </button>
+    </div>
+   </div>
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+     <a class="navbar-brand" href="/">
+     </a>
+     <button aria-label="Toggle navigation" class="navbar-toggler" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul aria-label="Main menu" class="navbar-nav ms-auto mb-2" role="menubar">
+       <li class="nav-item" role="menuitem">
+        <a class="nav-link active" data-test="nav-home" href="/">
+         Home
+        </a>
+       </li>
+       <li class="nav-item dropdown" role="menuitem">
+        <button class="nav-link dropdown-toggle btn-link-style" data-test="nav-categories" type="button">
+         Categories
+        </button>
+        <ul aria-label="nav-categories" class="dropdown-menu">
+         <li>
+          <a class="dropdown-item" data-test="nav-hand-tools" href="/category/hand-tools">
+           Hand Tools
+          </a>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-power-tools" href="/category/power-tools">
+           Power Tools
+          </a>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-other" href="/category/other">
+           Other
+          </a>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-special-tools" href="/category/special-tools">
+           Special Tools
+          </a>
+         </li>
+         <li>
+          <hr class="dropdown-divider"/>
+         </li>
+         <li>
+          <a class="dropdown-item" data-test="nav-rentals" href="/rentals">
+           Rentals
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="nav-item" role="menuitem">
+        <a class="nav-link" data-test="nav-contact" href="/contact">
+         Contact
+        </a>
+       </li>
+       <li class="nav-item" role="menuitem">
+        <a class="nav-link" data-test="nav-sign-in" href="/auth/login">
+         Sign in
+        </a>
+       </li>
+      </ul>
+      <div class="btn-group dropdown">
+       <button aria-label="Select language" class="btn nav-link dropdown-toggle" data-test="language-select" id="language" type="button">
+        <fa-icon class="ng-fa-icon">
+        </fa-icon>
+        EN
+        <span class="caret">
+        </span>
+       </button>
+       <ul class="dropdown-menu dropdown-menu-right" id="dropdown-animated" role="menu">
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-de">
+          DE
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-el">
+          EL
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-en">
+          EN
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-es">
+          ES
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-fr">
+          FR
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-nl">
+          NL
+         </a>
+        </li>
+        <li role="menuitem">
+         <a class="dropdown-item" data-test="lang-tr">
+          TR
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </app-header>
+  <div class="container">
+   <router-outlet>
+   </router-outlet>
+   <app-category>
+    <div class="row">
+     <h2 data-test="page-title">
+      Category: Hand Tools
+     </h2>
+    </div>
+    <div class="row my-4">
+     <a class="btn btn-secondary d-block" data-test="filters" href="#filters" role="button">
+      <fa-icon class="ng-fa-icon">
+      </fa-icon>
+      Filters
+     </a>
+     <div class="collapse d-md-block col-md-3" data-test="filters" id="filters">
+      <h4 class="grid-title">
+       <fa-icon class="ng-fa-icon">
+       </fa-icon>
+       Sort
+      </h4>
+      <hr/>
+      <form>
+       <div class="input-group mb-3">
+        <select class="form-select" data-test="sort">
+         <option value="">
+         </option>
+         <option value="name,asc">
+          Name (A - Z)
+         </option>
+         <option value="name,desc">
+          Name (Z - A)
+         </option>
+         <option value="price,desc">
+          Price (High - Low)
+         </option>
+         <option value="price,asc">
+          Price (Low - High)
+         </option>
+         <option value="co2_rating,asc">
+          CO₂ Rating (A - E)
+         </option>
+         <option value="co2_rating,desc">
+          CO₂ Rating (E - A)
+         </option>
+        </select>
+       </div>
+      </form>
+      <h4 class="grid-title">
+       <fa-icon class="ng-fa-icon">
+       </fa-icon>
+       Filters
+      </h4>
+      <hr/>
+      <h4>
+       By category:
+      </h4>
+      <div class="checkbox">
+       <label>
+        <input class="icheck" data-test="category-01M6H5579YR0WQ4825D3EXGPBD" name="category_id" type="checkbox" value="01M6H5579YR0WQ4825D3EXGPBD"/>
+        Hand Tools
+       </label>
+       <ul>
+        <div class="checkbox">
+         <label>
+          <input class="icheck" data-test="category-01M6H557A5S7X5803C70VEECZG" name="category_id" type="checkbox" value="01M6H557A5S7X5803C70VEECZG"/>
+          Hammer
+         </label>
+        </div>
+        <div class="checkbox">
+         <label>
+          <input class="icheck" data-test="category-01M6H557A5S7X5803C70VEECZH" name="category_id" type="checkbox" value="01M6H557A5S7X5803C70VEECZH"/>
+          Hand Saw
+         </label>
+        </div>
+        <div class="checkbox">
+         <label>
+          <input class="icheck" data-test="category-01M6H557A5S7X5803C70VEECZJ" name="category_id" type="checkbox" value="01M6H557A5S7X5803C70VEECZJ"/>
+          Wrench
+         </label>
+        </div>
+        <div class="checkbox">
+         <label>
+          <input class="icheck" data-test="category-01M6H557A5S7X5803C70VEECZK" name="category_id" type="checkbox" value="01M6H557A5S7X5803C70VEECZK"/>
+          Screwdriver
+         </label>
+        </div>
+        <div class="checkbox">
+         <label>
+          <input class="icheck" data-test="category-01M6H557A5S7X5803C70VEECZM" name="category_id" type="checkbox" value="01M6H557A5S7X5803C70VEECZM"/>
+          Pliers
+         </label>
+        </div>
+        <div class="checkbox">
+         <label>
+          <input class="icheck" data-test="category-01M6H557A5S7X5803C70VEECZN" name="category_id" type="checkbox" value="01M6H557A5S7X5803C70VEECZN"/>
+          Chisels
+         </label>
+        </div>
+        <div class="checkbox">
+         <label>
+          <input class="icheck" data-test="category-01M6H557A5S7X5803C70VEECZP" name="category_id" type="checkbox" value="01M6H557A5S7X5803C70VEECZP"/>
+          Measures
+         </label>
+        </div>
+       </ul>
+      </div>
+      <div class="py-2">
+      </div>
+      <h4>
+       By brand:
+      </h4>
+      <div class="checkbox">
+       <label>
+        <input class="icheck" data-test="brand-01M6H55740NG647YC2QF461VJN" name="brand_id" type="checkbox" value="01M6H55740NG647YC2QF461VJN"/>
+        ForgeFlex Tools
+       </label>
+      </div>
+      <div class="checkbox">
+       <label>
+        <input class="icheck" data-test="brand-01M6H55740NG647YC2QF461VJP" name="brand_id" type="checkbox" value="01M6H55740NG647YC2QF461VJP"/>
+        MightyCraft Hardware
+       </label>
+      </div>
+      <div class="py-2">
+      </div>
+      <h4>
+       Sustainability:
+      </h4>
+      <fieldset>
+       <legend class="visually-hidden">
+        Eco-Friendly Products
+       </legend>
+       <div class="checkbox">
+        <label>
+         <input class="icheck" data-test="eco-friendly-filter" name="eco_friendly" type="checkbox"/>
+         Show only eco-friendly products
+        </label>
+       </div>
+      </fieldset>
+     </div>
+     <div class="col-md-9">
+      <div class="container" data-test="">
+       <a class="card" data-test="product-01M6H557B5WZXFJVDG6MP74FA8" href="/product/01M6H557B5WZXFJVDG6MP74FA8">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Claw Hammer with Shock Reduction Grip
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $13.41
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557B6NTJ95AGEANSPP8ZE" href="/product/01M6H557B6NTJ95AGEANSPP8ZE">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Hammer
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $12.58
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557B7W69ZBYB9ZHQKPHSY" href="/product/01M6H557B7W69ZBYB9ZHQKPHSY">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Claw Hammer
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $11.48
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557B8Q8S878C9N9YKBF43" href="/product/01M6H557B8Q8S878C9N9YKBF43">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Thor Hammer
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $11.14
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557B9MRVYBXXS7W6VTF3H" href="/product/01M6H557B9MRVYBXXS7W6VTF3H">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Sledgehammer
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $17.75
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557BAFB8Q71NPA8CVFTP2" href="/product/01M6H557BAFB8Q71NPA8CVFTP2">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Claw Hammer with Fiberglass Handle
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $20.14
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557BBY6ZTD5N469PAZD1Z" href="/product/01M6H557BBY6ZTD5N469PAZD1Z">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Court Hammer
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $18.63
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557BCKJA2TNC0YKH0RX4Z" href="/product/01M6H557BCKJA2TNC0YKH0RX4Z">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <span class="eco-badge position-absolute top-0" data-test="eco-badge">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+          ECO
+         </span>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Wood Saw
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter active rating-b">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $12.18
+          </span>
+         </span>
+        </div>
+       </a>
+       <a class="card" data-test="product-01M6H557BDPZ80WDZ6DD3SR043" href="/product/01M6H557BDPZ80WDZ6DD3SR043">
+        <div class="card-img-wrapper position-relative">
+         <img class="card-img-top"/>
+         <button aria-label="Compare" class="btn compare-btn position-absolute" data-test="compare-btn">
+          <fa-icon class="ng-fa-icon">
+          </fa-icon>
+         </button>
+        </div>
+        <div class="card-body">
+         <h5 class="card-title" data-test="product-name">
+          Adjustable Wrench
+         </h5>
+         <div class="co2-rating-scale" data-test="co2-rating-badge">
+          <span class="co2-letter">
+           A
+          </span>
+          <span class="co2-letter">
+           B
+          </span>
+          <span class="co2-letter">
+           C
+          </span>
+          <span class="co2-letter active rating-d">
+           D
+          </span>
+          <span class="co2-letter">
+           E
+          </span>
+         </div>
+        </div>
+        <div class="card-footer">
+         <span class="float-end text-muted">
+          <span data-test="product-price">
+           $20.33
+          </span>
+         </span>
+        </div>
+       </a>
+      </div>
+      <div class="mt-3">
+       <app-pagination>
+        <nav>
+         <ul class="pagination">
+          <li class="page-item disabled">
+           <a aria-label="Previous" class="page-link" data-test="pagination-prev" role="button">
+            <span>
+             «
+            </span>
+           </a>
+          </li>
+          <li class="page-item active">
+           <a aria-label="Page-1" class="page-link" role="button">
+            1
+           </a>
+          </li>
+          <li class="page-item">
+           <a aria-label="Page-2" class="page-link" role="button">
+            2
+           </a>
+          </li>
+          <li class="page-item">
+           <a aria-label="Page-3" class="page-link" role="button">
+            3
+           </a>
+          </li>
+          <li class="page-item">
+           <a aria-label="Next" class="page-link" data-test="pagination-next" role="button">
+            <span>
+             »
+            </span>
+           </a>
+          </li>
+         </ul>
+        </nav>
+       </app-pagination>
+      </div>
+     </div>
+    </div>
+   </app-category>
+  </div>
+  <app-footer>
+   <footer class="container-fluid text-center bg-light">
+    <div>
+     This is a DEMO application (
+     <a href="https://github.com/testsmith-io/practice-software-testing">
+      GitHub repo
+     </a>
+     ), used for software testing training purpose. |
+     <a href="/privacy">
+      Privacy Policy
+     </a>
+     | Banner photo by
+     <a href="https://unsplash.com/@barnimages">
+      Barn Images
+     </a>
+     on
+     <a href="https://unsplash.com/photos/t5YUoHW6zRo">
+      Unsplash
+     </a>
+     .
+    </div>
+    <div class="text-muted">
+     v6.0.0 | Built 2026-07-05 | Angular 20.0.5
+    </div>
+   </footer>
+  </app-footer>
+  <app-chat-widget>
+   <div class="chat-widget">
+    <button aria-label="Open chat" class="chat-toggle-btn" data-test="chat-toggle">
+    </button>
+   </div>
+  </app-chat-widget>
+  <app-live-activity-widget>
+   <div class="live-widget">
+    <button aria-label="Show live shop activity" class="live-toggle-btn" data-test="live-activity-toggle" type="button">
+    </button>
+   </div>
+  </app-live-activity-widget>
+ </app-root>
+ <script type="module">
+ </script>
+ <script>
+ </script>
+ <script type="module">
+ </script>
+</body>
